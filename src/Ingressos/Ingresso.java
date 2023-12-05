@@ -1,18 +1,20 @@
 package Ingressos;
 
-public class Ingresso {
+public abstract class Ingresso {
 
-    protected double preco;
+    protected double valor;
 
     public Ingresso() {
-        this.preco = 200;
+        this.valor = 200;
     }
 
-    public double imprimeValor(){
-        return this.preco;
+    public void imprimeValor(){
+        System.out.println("O preço do ingresso é: " + valor);
     }
 
     public String tipoIngresso(){
         return null;
     }
+
+    public abstract void ImprimeTudo();
 }
