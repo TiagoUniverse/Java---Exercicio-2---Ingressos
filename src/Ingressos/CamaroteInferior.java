@@ -6,13 +6,26 @@ public class CamaroteInferior extends Ingresso_VIP{
 
     public CamaroteInferior() {
         super();
-        this.localizacao = "Parte inferior do palco";
+        this.localizacao = "Parte superior do palco";
     }
 
-    public String imprimir_localizacao(){
-        return  localizacao;
+    public double valorTotal(){
+        return (valor * 2);
+    }
+
+    public void imprimir_localizacao(){
+        System.out.println("A localização do camarote se encontra em: " + localizacao);
     }
 
     @Override
+    public void imprimeValor(){
+        System.out.println("Valor do Ingresso VIP: R$,.2f\n" + valorTotal());
+    }
+
+    @Override
+    public void ImprimeTudo(){
+        System.out.println("Camarote Inferior");
+        System.out.println("Valor do Ingresso VIP: R$,.2f\n" + valorTotal());
+    }
 
 }

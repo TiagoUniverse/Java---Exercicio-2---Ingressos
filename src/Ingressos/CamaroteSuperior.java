@@ -1,7 +1,6 @@
 package Ingressos;
 
 public class CamaroteSuperior extends Ingresso_VIP{
-
     protected String localizacao;
 
     public CamaroteSuperior() {
@@ -9,12 +8,24 @@ public class CamaroteSuperior extends Ingresso_VIP{
         this.localizacao = "Parte superior do palco";
     }
 
-    public String imprimir_localizacao(){
-        return localizacao;
+    public double valorTotal(){
+        return (valor * 3);
+    }
+
+    public void imprimir_localizacao(){
+        System.out.println("A localização do camarote se encontra em: " + localizacao);
     }
 
     @Override
-    public double imprimeValor(){
-        return preco + 700;
+    public void imprimeValor(){
+        System.out.println("Valor do Ingresso VIP: R$,.2f\n" + valorTotal());
     }
+
+    @Override
+    public void ImprimeTudo(){
+        System.out.println("Camarote Superior");
+        System.out.println("Valor do Ingresso VIP: R$,.2f\n" + valorTotal());
+    }
+
+
 }
